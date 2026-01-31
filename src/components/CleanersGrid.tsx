@@ -7,19 +7,19 @@ const services = [
   { icon: Wand, title: "End of tenancy cleaning" },
   { icon: HardHat, title: "After builders cleaning" },
   { icon: WashingMachine, title: "Carpet cleaning" },
-  { icon: Leaf, title: "Gardener" },
+  // { icon: Leaf, title: "Gardener" },
   { icon: Hammer, title: "Handyman" },
   { icon: PlugZap, title: "Electrician" },
   { icon: Wrench, title: "Appliance engineer" },
 //   { icon: Thermometer, title: "Gas & heating engineer" },//
   { icon: Paintbrush2, title: "Painter & decorator" },
-  { icon: Zap, title: "Energy assessor" },
+  // { icon: Zap, title: "Energy assessor" },
 //   { icon: FileText, title: "Certificates & reports" },//
-  { icon: Key, title: "Locksmith" },//
+  // { icon: Key, title: "Locksmith" },//
   { icon: Hammer, title: "Carpenter" },
-  { icon: CornerDownRight, title: "Drainage specialist" },
-  { icon: Truck, title: "Removals" },
-  { icon: Trash2, title: "Waste removal" },
+  // { icon: CornerDownRight, title: "Drainage specialist" },
+  // { icon: Truck, title: "Removals" },
+  // { icon: Trash2, title: "Waste removal" },
   { icon: Briefcase, title: "Builder" },
   { icon: Sofa, title: "Upholstery cleaning" },
   { icon: Wrench, title: "Plumber" },
