@@ -27,7 +27,7 @@ const LeadForm = () => {
 
   return (
     <section id="contact" className="py-24 bg-secondary">
-      <div className="container mx-auto px-4 lg:px-8">
+      <div className="container mx-auto px-4 lg:px-8 w-screen">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left Column */}
           <div>
@@ -37,7 +37,7 @@ const LeadForm = () => {
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mt-3 mb-6">
               Request Your Free Estimate
             </h2>
-            <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
+            <p className="text-muted-foreground text-sm lg:text-lg mb-10 leading-relaxed">
               Fill out the form and we’ll send you a free, no-obligation estimate
               within 24 hours.
             </p>
@@ -70,11 +70,11 @@ const LeadForm = () => {
           </div>
 
           {/* Right Column - Form */}
-          <div className="bg-card rounded-2xl shadow-elevated p-8 md:p-10">
+          <div className="bg-card rounded-2xl shadow-elevated w-full p-4 sm:p-6 md:p-10">
             <form
               action="https://formspree.io/f/xnjvkeeq"
               method="POST"
-              className="space-y-6"
+              className="space-y-4 sm:space-y-6"
             >
               <input
                 type="hidden"
@@ -82,8 +82,9 @@ const LeadForm = () => {
                 value="New Cleaning Estimate Request"
               />
 
-              <div>
-                <label className="block text-sm font-medium mb-2">
+              {/* Name */}
+              <div className="space-y-1.5">
+                <label className="block text-sm font-medium">
                   Your Name
                 </label>
                 <Input
@@ -94,8 +95,9 @@ const LeadForm = () => {
                 />
               </div>
 
-              <div>
-                <label className="block text-sm font-medium mb-2">
+              {/* Email */}
+              <div className="space-y-1.5">
+                <label className="block text-sm font-medium">
                   Email Address
                 </label>
                 <Input
@@ -106,19 +108,22 @@ const LeadForm = () => {
                 />
               </div>
 
-              <div>
-                <label className="block text-sm font-medium mb-2">
+              {/* Service */}
+              <div className="space-y-1.5">
+                <label className="block text-sm font-medium">
                   Service Type
                 </label>
+
                 <Select
                   value={formData.service}
                   onValueChange={(value) =>
                     setFormData({ service: value })
                   }
                 >
-                  <SelectTrigger>
+                  <SelectTrigger className="w-full">
                     <SelectValue placeholder="Select a service" />
                   </SelectTrigger>
+
                   <SelectContent>
                     {serviceTypes.map((service) => (
                       <SelectItem
@@ -138,30 +143,34 @@ const LeadForm = () => {
                 />
               </div>
 
-              <div>
-                <label className="block text-sm font-medium mb-2">
+              {/* Message */}
+              <div className="space-y-1.5">
+                <label className="block text-sm font-medium">
                   Message (Optional)
                 </label>
                 <Textarea
                   name="message"
                   placeholder="Tell us about your cleaning needs..."
-                  rows={4}
+                  rows={3}
+                  className="sm:rows-4"
                 />
               </div>
 
+              {/* Button */}
               <Button
                 type="submit"
-                className="w-full bg-accent text-accent-foreground py-6 text-lg font-semibold"
+                className="w-full bg-accent text-accent-foreground py-4 sm:py-6 text-base sm:text-lg font-semibold"
               >
                 Request My Free Estimate
-                <Send className="ml-2 w-5 h-5" />
+                <Send className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
               </Button>
 
-              <p className="text-xs text-center text-muted-foreground">
+              <p className="text-xs text-center text-muted-foreground px-2">
                 No spam. No obligation. We’ll contact you within 24 hours.
               </p>
             </form>
           </div>
+
         </div>
       </div>
     </section>

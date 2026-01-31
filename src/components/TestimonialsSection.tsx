@@ -80,7 +80,7 @@ const TestimonialsSection = () => {
               </div>
 
               {/* Quote */}
-              <blockquote className="text-xl md:text-2xl text-card-foreground leading-relaxed mb-8 font-medium">
+              <blockquote className="text-base md:text-2xl text-card-foreground leading-relaxed mb-8 font-medium">
                 "{testimonials[currentIndex].content}"
               </blockquote>
 

@@ -7,6 +7,7 @@ const HeroSection = () => {
     "Fully Insured",
     "Eco-Friendly Products",
     "Background Checked Staff",
+    "Holiday lets (Airbnb, Booking.com, Vrbo etc)",
   ];
 
   return (
@@ -25,20 +26,20 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="max-w-2xl">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-fresh/20 backdrop-blur-sm text-primary-foreground px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
+          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-primary-foreground px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
             <span className="w-2 h-2 bg-fresh rounded-full animate-sparkle" />
             Professional Cleaning Services
           </div>
 
           {/* Headline */}
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-in [animation-delay:100ms] opacity-0">
-            Balkan Standards,{" "}
+          <h1 className="font-display text-4xl md:text-5xl lg:text-7xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-in [animation-delay:100ms] opacity-0 text-fresh">
+            Balkan Cleaning,{" "}
             <span className="text-crimson-light">Spotless Results.</span>
           </h1>
-
+          
           {/* Subheadline */}
-          <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 leading-relaxed animate-fade-in [animation-delay:200ms] opacity-0 text-balance">
-            Professional residential and commercial cleaning services you can
+          <p className="text-lg md:text-base text-primary-foreground/90 mb-8 leading-relaxed animate-fade-in [animation-delay:200ms] opacity-0 text-balance">
+            Professional residential cleaning services you can
             trust. Serving London with integrity and attention to detail.
           </p>
 
