@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import CleanersGrid from "@/components/CleanersGrid";
 import ServicesGrid from "@/components/ServicesGrid";
 import TrustBadges from "@/components/TrustBadges";
 import TestimonialsSection from "@/components/TestimonialsSection";

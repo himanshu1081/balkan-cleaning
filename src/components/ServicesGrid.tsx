@@ -1,6 +1,7 @@
 import { Home, Building2, Sparkles, ArrowRight } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import CleanersGrid from "./CleanersGrid";
 
 const services = [
   {
@@ -88,6 +89,7 @@ const ServicesGrid = () => {
           ))}
         </div>
       </div>
+      <CleanersGrid/>
     </section>
   );
 };
