@@ -5,9 +5,18 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import Lenis from 'lenis'
 
 const queryClient = new QueryClient();
+// Initialize Lenis
+const lenis = new Lenis({
+  autoRaf: true,
+});
 
+// Listen for the scroll event and log the event data
+lenis.on('scroll', (e) => {
+  console.log(e);
+});
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
