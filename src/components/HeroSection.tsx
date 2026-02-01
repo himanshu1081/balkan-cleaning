@@ -36,7 +36,7 @@ const HeroSection = () => {
             Balkan Cleaning,{" "}
             <span className="text-crimson-light">Spotless Results.</span>
           </h1>
-          
+
           {/* Subheadline */}
           <p className="text-lg md:text-base text-primary-foreground/90 mb-8 leading-relaxed animate-fade-in [animation-delay:200ms] opacity-0 text-balance">
             Professional residential cleaning services you can
@@ -81,7 +81,7 @@ const HeroSection = () => {
       </div>
 
       {/* Decorative Elements */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10" />
+      {/* <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-background to-transparent z-10" /> */}
     </section>
   );
 };

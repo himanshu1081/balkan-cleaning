@@ -6,6 +6,7 @@ import TrustBadges from "@/components/TrustBadges";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import LeadForm from "@/components/LeadForm";
 import Footer from "@/components/Footer";
+import BeforeAfterSection from "@/components/BeforeAndAfterSection";
 
 const Index = () => {
   return (
@@ -15,6 +16,7 @@ const Index = () => {
         <HeroSection />
         <ServicesGrid />
         <TrustBadges />
+        <BeforeAfterSection/>
         <TestimonialsSection />
         <LeadForm />
       </main>

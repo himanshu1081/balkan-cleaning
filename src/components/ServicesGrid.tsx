@@ -2,6 +2,7 @@ import { Home, Building2, Sparkles, ArrowRight } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import CleanersGrid from "./CleanersGrid";
+import { motion } from "motion/react"
 
 const services = [
   {
@@ -33,17 +34,37 @@ const ServicesGrid = () => {
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-accent font-semibold text-sm uppercase tracking-wider">Our Services</span>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mt-3 mb-4">
+          <motion.span
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: .5, delay: 0 }}
+            viewport={{ once: true }}
+            className="text-accent font-semibold text-sm uppercase tracking-wider">Our Services</motion.span>
+          <motion.h2
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: .5, delay: .2 }}
+            viewport={{ once: true }}
+            className="font-display text-3xl md:text-4xl font-bold text-foreground mt-3 mb-4">
             Comprehensive Cleaning Solutions
-          </h2>
-          <p className="text-muted-foreground text-lg">
+          </motion.h2>
+          <motion.p
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: .5, delay: .4 }}
+            viewport={{ once: true }}
+            className="text-muted-foreground text-lg">
             From homes to offices, we deliver exceptional cleaning services tailored to your needs.
-          </p>
+          </motion.p>
         </div>
 
         {/* Services Cards */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: .5, delay: .4 }}
+          viewport={{ once: true }}
+          className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <Card
               key={service.title}
@@ -51,11 +72,10 @@ const ServicesGrid = () => {
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <CardHeader className="pb-4">
-                <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-4 transition-colors ${
-                  service.color === 'crimson' 
-                    ? 'bg-crimson/10 group-hover:bg-crimson/20' 
-                    : 'bg-fresh/10 group-hover:bg-fresh/20'
-                }`}>
+                <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-4 transition-colors ${service.color === 'crimson'
+                  ? 'bg-crimson/10 group-hover:bg-crimson/20'
+                  : 'bg-fresh/10 group-hover:bg-fresh/20'
+                  }`}>
                   <service.icon className={`w-7 h-7 ${service.color === 'crimson' ? 'text-crimson' : 'text-fresh'}`} />
                 </div>
                 <CardTitle className="font-display text-xl text-card-foreground">
@@ -87,9 +107,9 @@ const ServicesGrid = () => {
               </CardContent>
             </Card>
           ))}
-        </div>
+        </motion.div>
       </div>
-      <CleanersGrid/>
+      <CleanersGrid />
     </section>
   );
 };

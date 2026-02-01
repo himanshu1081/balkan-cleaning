@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { motion } from "motion/react"
 import {
   Select,
   SelectContent,
@@ -31,18 +32,38 @@ const LeadForm = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left Column */}
           <div>
-            <span className="text-accent font-semibold text-sm uppercase tracking-wider">
+            <motion.span
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: .5, delay: .2 }}
+              viewport={{ once: true }}
+              className="text-accent font-semibold text-sm uppercase tracking-wider">
               Get in Touch
-            </span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mt-3 mb-6">
+            </motion.span>
+            <motion.h2
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: .5, delay: .4 }}
+              viewport={{ once: true }}
+              className="font-display text-3xl md:text-4xl font-bold text-foreground mt-3 mb-6">
               Request Your Free Estimate
-            </h2>
-            <p className="text-muted-foreground text-sm lg:text-lg mb-10 leading-relaxed">
+            </motion.h2>
+            <motion.p
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: .5, delay: .6 }}
+              viewport={{ once: true }}
+              className="text-muted-foreground text-sm lg:text-lg mb-10 leading-relaxed">
               Fill out the form and we’ll send you a free, no-obligation estimate
               within 24 hours.
-            </p>
+            </motion.p>
 
-            <div className="space-y-6">
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: .5, delay: .8 }}
+              viewport={{ once: true }}
+              className="space-y-6">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-xl bg-fresh/10 flex items-center justify-center">
                   <Mail className="w-5 h-5 text-fresh" />
@@ -66,11 +87,16 @@ const LeadForm = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
 
           {/* Right Column - Form */}
-          <div className="bg-card rounded-2xl shadow-elevated w-full p-4 sm:p-6 md:p-10">
+          <motion.div
+            initial={{ x: 20, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: .5, delay: .2 }}
+            viewport={{ once: true }}
+            className="bg-card rounded-2xl shadow-elevated w-full p-4 sm:p-6 md:p-10">
             <form
               action="https://formspree.io/f/xnjvkeeq"
               method="POST"
@@ -169,11 +195,11 @@ const LeadForm = () => {
                 No spam. No obligation. We’ll contact you within 24 hours.
               </p>
             </form>
-          </div>
+          </motion.div>
 
         </div>
       </div>
-    </section>
+    </section >
   );
 };
 
