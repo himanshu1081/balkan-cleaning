@@ -1,18 +1,18 @@
 const comparisons = [
   {
     title: "Kitchen Deep Cleaning",
-    before: "../../src/assets/Before/Before1.png",
-    after: "../../src/assets/After/After1.png",
+    before: "public/Before/Before1.png",
+    after: "public/After/After1.png",
   },
   {
     title: "Bathroom Transformation",
-    before: "../../src/assets/Before/Before2.png",
-    after: "../../src/assets/After/After2.png",
+    before: "public/Before/Before2.png",
+    after: "public/After/After2.png",
   },
   {
     title: "Living Room Refresh",
-    before: "../../src/assets/Before/Before3.png",
-    after: "../../src/assets/After/After3.png",
+    before: "public/Before/Before3.png",
+    after: "public/After/After3.png",
   },
 ];
 
