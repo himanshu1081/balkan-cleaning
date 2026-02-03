@@ -26,23 +26,23 @@ const badges = [
 
 const TrustBadges = () => {
   return (
-    <section className="py-16 bg-[#f5f5f5] ">
+    <section className="py-16 bg-primary">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8">
           {badges.map((badge, index) => (
             <div
               key={badge.title}
-              className="flex items-start gap-4 p-6 rounded-xl bg-[#ffffff] backdrop-blur-sm"
+              className="flex items-start gap-4 p-6 rounded-xl bg-primary-foreground/5 backdrop-blur-sm"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className={`flex-shrink-0 w-12 h-12 rounded-lg ${badge.bgColor}  flex items-center justify-center`}>
+              <div className={`flex-shrink-0 w-12 h-12 rounded-lg ${badge.bgColor} flex items-center justify-center`}>
                 <badge.icon className={`w-6 h-6 ${badge.iconColor}`} />
               </div>
               <div>
-                <h3 className="font-semibold text-black mb-1">
+                <h3 className="font-semibold text-primary-foreground mb-1">
                   {badge.title}
                 </h3>
-                <p className="text-sm text-black/50">
+                <p className="text-sm text-primary-foreground/70">
                   {badge.description}
                 </p>
               </div>

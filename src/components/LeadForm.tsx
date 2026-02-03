@@ -69,7 +69,9 @@ const LeadForm = () => {
                   <Mail className="w-5 h-5 text-fresh" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">Email Us</p>
+                  <p className="text-sm text-muted-foreground">
+                    Email Us
+                  </p>
                   <p className="font-semibold text-foreground">
                     info@balkancleaning.co.uk
                   </p>
@@ -86,6 +88,17 @@ const LeadForm = () => {
                     Greater London Area
                   </p>
                 </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: .5, delay: .8 }}
+              viewport={{ once: true }}
+              className="space-y-6">
+              <div className="flex items-center gap-4 justify-center mt-5">
+                <img src="/drawing1.png" alt="" className="w-4/6 h-1/6 sm:w-3/6 lg:4/6"/>
               </div>
             </motion.div>
           </div>

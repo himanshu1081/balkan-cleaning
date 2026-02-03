@@ -19,17 +19,17 @@ const comparisons = [
 
 const BeforeAfterSection = () => {
     return (
-        <section className="py-20 sm:py-24 bg-[#2e2e2e]">
+        <section className="py-20 sm:py-24 bg-background">
             <div className="container mx-auto px-4 lg:px-8">
                 {/* Header */}
                 <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
                     <span className="text-accent font-semibold text-sm uppercase tracking-wider">
                         Real Results
                     </span>
-                    <h2 className="font-display text-3xl md:text-4xl font-bold text-white mt-3 mb-4">
+                    <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mt-3 mb-4">
                         Before & After
                     </h2>
-                    <p className="text-white/50 text-base sm:text-lg">
+                    <p className="text-muted-foreground text-base sm:text-lg">
                         See the difference professional cleaning makes.
                     </p>
                 </div>
