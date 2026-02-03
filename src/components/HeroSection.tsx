@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
-import heroImage from "@/assets/hero-cleaning.jpg";
+import heroImage from "@/assets/Animated_Cleaning_Video_Creation (1).gif";
+import heroVideo from "@/assets/Professional_Cleaning_Video_Generation.mp4";
 
 const HeroSection = () => {
   const highlights = [
@@ -14,19 +15,26 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img
+        {/* <img
           src={heroImage}
           alt="Clean modern interior"
           className="w-full h-full object-cover"
+        /> */}
+        <video
+          src={heroVideo}
+          muted
+          loop
+          autoPlay
+          className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/50" />
+        <div className="absolute inset-0 bg-black/40" />
       </div>
 
       {/* Content */}
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="max-w-2xl">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-primary-foreground px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
+          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-primary-foreground px-4 py-2 rounded-full text-xs md:text-sm font-medium mb-6 animate-fade-in">
             <span className="w-2 h-2 bg-fresh rounded-full animate-sparkle" />
             Professional Cleaning Services
           </div>
@@ -38,7 +46,7 @@ const HeroSection = () => {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-base text-primary-foreground/90 mb-8 leading-relaxed animate-fade-in [animation-delay:200ms] opacity-0 text-balance">
+          <p className="text-sm md:text-base text-primary-foreground/90 mb-8 leading-relaxed animate-fade-in [animation-delay:200ms] opacity-0 text-balance">
             Professional residential cleaning services you can
             trust. Serving London with integrity and attention to detail.
           </p>
@@ -48,7 +56,7 @@ const HeroSection = () => {
             {highlights.map((item) => (
               <div
                 key={item}
-                className="flex items-center gap-2 text-primary-foreground/80 text-sm"
+                className="flex items-center gap-2 text-primary-foreground/80 text-xs md:text-sm"
               >
                 <CheckCircle className="w-4 h-4 text-fresh" />
                 {item}
@@ -61,7 +69,7 @@ const HeroSection = () => {
             <Button
               asChild
               size="lg"
-              className="bg-accent hover:bg-crimson-dark text-accent-foreground font-semibold px-8 py-6 text-lg transition-all hover:shadow-elevated hover:scale-105"
+              className="bg-accent hover:bg-crimson-dark text-accent-foreground font-semibold md:px-8 md:py-6 text-sm md:text-lg transition-all hover:shadow-elevated hover:scale-105"
             >
               <a href="#contact">
                 Book Your Cleaning
@@ -72,7 +80,7 @@ const HeroSection = () => {
               asChild
               size="lg"
               variant="outline"
-              className="border-primary-foreground/30 text-primary-foreground bg-transparent hover:bg-primary-foreground/10 font-semibold px-8 py-6 text-lg"
+              className="border-primary-foreground/30 text-primary-foreground bg-transparent hover:bg-primary-foreground/10 font-semibold md:px-8 md:py-6 text-sm md:text-lg"
             >
               <a href="#services">View Our Services</a>
             </Button>

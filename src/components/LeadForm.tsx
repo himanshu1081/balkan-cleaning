@@ -92,9 +92,9 @@ const LeadForm = () => {
             </motion.div>
 
             <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: .5, delay: .8 }}
+              initial={{ x: -20, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: .5, delay: .2 }}
               viewport={{ once: true }}
               className="space-y-6">
               <div className="flex items-center gap-4 justify-center mt-5">
