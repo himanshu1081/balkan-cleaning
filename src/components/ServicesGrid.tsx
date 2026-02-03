@@ -30,7 +30,7 @@ const services = [
 
 const ServicesGrid = () => {
   return (
-    <section id="services" className="py-24 bg-secondary">
+    <section id="services" className="py-24 bg-secondary ">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
@@ -109,7 +109,6 @@ const ServicesGrid = () => {
           ))}
         </motion.div>
       </div>
-      <CleanersGrid />
     </section>
   );
 };
