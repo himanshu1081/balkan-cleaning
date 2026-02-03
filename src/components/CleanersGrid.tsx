@@ -1,4 +1,5 @@
 import { Home, Sparkles, Wand, WashingMachine, Leaf, Wrench, Hammer, PlugZap, Plug, Thermometer, Paintbrush2, Zap, FileText, Key, CornerDownRight, Truck, Trash2, Briefcase, Sofa, HardHat } from "lucide-react";
+import { motion } from "framer-motion"
 
 const services = [
   { icon: Wand, title: "Regular cleaning" },
@@ -30,13 +31,27 @@ const CleanersGrid = () => {
     <section aria-labelledby="nearby-services" className="py-20 bg-[#2e2e2e]">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <span className="text-muted-foreground text-sm">Housekeep services near me</span>
-          <h2 id="nearby-services" className="text-white font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mt-3">
+          <motion.span
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0 }}
+            className="text-muted-foreground text-sm">
+            Housekeep services near me
+          </motion.span>
+          <motion.h2
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: .5, delay: .2 }}
+            id="nearby-services" className="text-white font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mt-3">
             Cleaners and tradespeople near me
-          </h2>
+          </motion.h2>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 justify-items-center">
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: .5, delay: .2 }}
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 justify-items-center">
           {services.map((service) => (
             <a
               key={service.title}
@@ -51,7 +66,7 @@ const CleanersGrid = () => {
               </span>
             </a>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

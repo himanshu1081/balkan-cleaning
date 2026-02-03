@@ -1,4 +1,7 @@
+"use client";
+
 import { useState, useEffect } from "react";
+import { motion, type Variants } from "framer-motion";
 import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -26,6 +29,26 @@ const testimonials = [
   },
 ];
 
+const easeOut = [0.16, 1, 0.3, 1] as const;
+
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: easeOut },
+  },
+};
+
+const slideFade: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: easeOut },
+  },
+};
+
 const TestimonialsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -40,7 +63,9 @@ const TestimonialsSection = () => {
 
   const goToPrevious = () => {
     setIsAutoPlaying(false);
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setCurrentIndex(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+    );
   };
 
   const goToNext = () => {
@@ -49,15 +74,17 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section
-      id="reviews"
-      className="py-24"
-      style={{ backgroundColor: "#2e2e2e" }}
-    >
+    <section id="reviews" className="py-24" style={{ backgroundColor: "#2e2e2e" }}>
       <div className="container mx-auto px-4 lg:px-8">
 
-        {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        {/* Header */}
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="text-center max-w-2xl mx-auto mb-16"
+        >
           <span className="text-crimson font-semibold text-sm uppercase tracking-wider">
             Testimonials
           </span>
@@ -67,20 +94,21 @@ const TestimonialsSection = () => {
           <p className="text-white/70 text-lg">
             Don’t just take our word for it—hear from our customers.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Testimonial Carousel */}
+        {/* Carousel */}
         <div className="max-w-4xl mx-auto relative">
-          <div className="rounded-2xl p-8 md:p-12 relative overflow-hidden
-                      bg-[#383838] shadow-[0_20px_60px_rgba(0,0,0,0.4)]">
-
-            {/* Quote Icon */}
+          <motion.div
+            key={currentIndex}
+            variants={slideFade}
+            initial="hidden"
+            animate="visible"
+            className="rounded-2xl p-8 md:p-12 relative overflow-hidden
+                       bg-[#383838] shadow-[0_20px_60px_rgba(0,0,0,0.4)]"
+          >
             <Quote className="absolute top-6 right-6 w-16 h-16 text-crimson/15" />
 
-            {/* Content */}
             <div className="relative z-10">
-
-              {/* Stars */}
               <div className="flex gap-1 mb-6">
                 {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
                   <Star
@@ -90,12 +118,10 @@ const TestimonialsSection = () => {
                 ))}
               </div>
 
-              {/* Quote */}
               <blockquote className="text-lg md:text-2xl text-white leading-relaxed mb-8 font-medium">
                 “{testimonials[currentIndex].content}”
               </blockquote>
 
-              {/* Author */}
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-crimson/20 flex items-center justify-center">
                   <span className="text-crimson font-bold text-lg">
@@ -111,9 +137,8 @@ const TestimonialsSection = () => {
                   </p>
                 </div>
               </div>
-
             </div>
-          </div>
+          </motion.div>
 
           {/* Navigation */}
           <div className="flex items-center justify-center gap-4 mt-10">
@@ -122,12 +147,11 @@ const TestimonialsSection = () => {
               size="icon"
               onClick={goToPrevious}
               className="rounded-full border-white/20 text-black hover:text-white
-                     hover:bg-crimson/20 hover:border-crimson"
+                         hover:bg-crimson/20 hover:border-crimson"
             >
               <ChevronLeft className="w-5 h-5" />
             </Button>
 
-            {/* Dots */}
             <div className="flex gap-2">
               {testimonials.map((_, index) => (
                 <button
@@ -149,7 +173,7 @@ const TestimonialsSection = () => {
               size="icon"
               onClick={goToNext}
               className="rounded-full border-white/20 text-black hover:text-white
-                     hover:bg-crimson/20 hover:border-crimson"
+                         hover:bg-crimson/20 hover:border-crimson"
             >
               <ChevronRight className="w-5 h-5" />
             </Button>
