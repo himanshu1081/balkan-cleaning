@@ -27,16 +27,17 @@ const services = [
     color: "crimson",
   }, {
     icon: Sparkles,
-    title: "After Service Cleaning",
+    title: "After Builders Cleaning",
     description:
-      "Thorough cleanup after repairs, renovations, or installations. We remove dust, debris, and mess so your space is move-in ready.",
+      "A detailed clean after construction or renovation work. We remove dust, paint splashes, and debris to leave your space spotless and ready to use.",
     features: [
-      "Post-renovation cleanup",
-      "Dust & debris removal",
-      "Final touch detailing",
+      "Post-construction dust removal",
+      "Paint & plaster residue cleaning",
+      "Final deep clean & detailing",
     ],
-    color: "fresh",
+    color: "crimson",
   },
+
 ];
 
 const ServicesGrid = () => {
