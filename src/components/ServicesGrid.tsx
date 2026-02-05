@@ -25,6 +25,17 @@ const services = [
     description: "End-of-tenancy, window cleaning, and carpet care. Expert solutions for specific cleaning needs.",
     features: ["End-of-tenancy", "Window cleaning", "Carpet & upholstery"],
     color: "crimson",
+  }, {
+    icon: Sparkles,
+    title: "After Service Cleaning",
+    description:
+      "Thorough cleanup after repairs, renovations, or installations. We remove dust, debris, and mess so your space is move-in ready.",
+    features: [
+      "Post-renovation cleanup",
+      "Dust & debris removal",
+      "Final touch detailing",
+    ],
+    color: "fresh",
   },
 ];
 
@@ -64,7 +75,7 @@ const ServicesGrid = () => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: .5, delay: .4 }}
           viewport={{ once: true }}
-          className="grid md:grid-cols-3 gap-8">
+          className="grid md:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <Card
               key={service.title}
