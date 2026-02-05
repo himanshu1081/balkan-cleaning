@@ -65,7 +65,7 @@ const HeroSection = () => {
           </div>
 
           {/* Headline */}
-          <h1 className="font-display text-4xl md:text-5xl lg:text-7xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-in [animation-delay:100ms] opacity-0 text-fresh">
+          <h1 className="font-display text-4xl md:text-5xl lg:text-7xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-in [animation-delay:100ms] opacity-0 text-green-500">
             Balkan Cleaning,{" "}
             <span className="text-crimson-light">Spotless Results.</span>
           </h1>
