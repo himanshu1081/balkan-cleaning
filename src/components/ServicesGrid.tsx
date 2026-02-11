@@ -35,7 +35,7 @@ const services = [
       "Paint & plaster residue cleaning",
       "Final deep clean & detailing",
     ],
-    color: "crimson",
+    color: "fresh",
   },
 
 ];
